@@ -42,7 +42,7 @@ def add_5(a_number):
         return a_number plus five
     except expressed in python, not english
     """
-    the_answer = None
+    the_answer = a_number + 5
     return the_answer
 
 
@@ -51,7 +51,7 @@ def adder(a_number, another_number):
 
     Same as above, but with any two numbers.
     """
-    the_answer = None
+    the_answer = a_number + another_number
     return the_answer
 
 
@@ -66,7 +66,9 @@ def shout(a_string):
           they all do different things. You'll need to actually read the
           docs to find out which one you actually need.
     """
-    the_answer = None
+    #a_string='hello'
+    #print(a_string.upper())
+    the_answer = a_string.upper()
     return the_answer
 
 
@@ -79,7 +81,9 @@ def really_shout(a_string):
     that you've reused the function you already wrote.
     Look up how to 'concatinate' strings to make this happen.
     """
-    the_answer = None
+    #a_string='hello'
+    #print(a_string.upper()+'!')
+    the_answer = a_string.upper()+'!'
     return the_answer
 
 
@@ -95,7 +99,10 @@ def shout_with_a_number(a_string, a_number):
           challenge, see if you can make the test pass with at least two ways
           of doing the same job.
     """
-    the_answer = None
+    #a_string='hello'
+    #a_number=42
+    #print(a_string.upper(), a_number)
+    the_answer = a_string.upper() + a_number
     return the_answer
 
 

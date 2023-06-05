@@ -19,16 +19,24 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+# i have no idea what this will do
 for word in some_words:
     print(word)
+# printed each word in the list on a seperate line
 
+# once again i have no idea - 
 for x in some_words:
     print(x)
+# does the same as print(word)
 
+# this will print some_words list
 print(some_words)
+# it printed the list
 
+# this will print the statement below if the list is greater than 3 - greater than 3 words in the list
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
+# printed the statement above
 
 
 def usefulFunction():
