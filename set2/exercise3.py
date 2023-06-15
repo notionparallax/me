@@ -8,7 +8,7 @@ def is_odd(a_number):
     Look into modulo division using the '%' operator as one way of doing this.
 
     e.g. 4 % 2 = 0
-        13 %12 = 1 
+        13 %12 = 1
         3 % 2 = 1
 
     So if a_number modulo two is zero, then it's even.
@@ -131,13 +131,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
     so call str(number) to cast.
     """
-    number_square =[]
+    number_square = []
     for i in range(10):
-        number_row =[]
+        number_row = []
         for j in range(10):
             number_row.append(str(i))
         number_square.append(number_row)
-        
+
     return number_square
 
 
@@ -157,14 +157,15 @@ def loops_4():
         ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         ]
     """
-    number_square =[]
+    number_square = []
     for i in range(10):
-        number_row =[]
+        number_row = []
         for j in range(10):
             number_row.append(str(j))
         number_square.append(number_row)
-        
+
     return number_square
+
 
 def loops_5():
     """Make the coordinates of the block.
@@ -193,12 +194,12 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    number_square =[]
+    number_square = []
     for i in range(10):
-        coordinates_row=[]
+        coordinates_row = []
         for j in range(5):
-            coordinates_row.append('(i{},j{})'.format(i,j))
-        number_square.append(coordinates_row)    
+            coordinates_row.append(f"(i{i}, j{j})")
+        number_square.append(coordinates_row)
     return number_square
 
 
@@ -222,11 +223,11 @@ def loops_6():  # sourcery skip: for-append-to-extend, simplify-generator
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    the_wedge = []   
-    for i in range(10):    
+    the_wedge = []
+    for i in range(10):
         row = []
         for j in range(i + 1):
-            row.append(j)
+            row.append(str(j))
         the_wedge.append(row)
     return the_wedge
 
@@ -252,16 +253,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    k=0
-    pyramid=[]
-    for i in range(1,6):
-        row =''
-        for j in range(1,6-i):
-            row += ' '
-        while k != (2*i-1):
-            row += '*   '
+    k = 0
+    pyramid = []
+    for i in range(1, 6):
+        row = ""
+        for j in range(1, 6 - i):
+            row += " "
+        while k != (2 * i - 1):
+            row += "*   "
             k += 1
-        k=0 
+        k = 0
         pyramid.append(row)
     return pyramid
 

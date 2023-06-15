@@ -1,7 +1,7 @@
 [
   {
     "of_total": 11,
-    "mark": 6,
+    "mark": 10,
     "results": [
       {
         "value": 1,
@@ -12,7 +12,7 @@
         "name": "check that Python and Requests are installed"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise1: Print 'Hello world!'"
       },
       {
@@ -20,7 +20,7 @@
         "name": "Lab book entry completed"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Update your aboutMe.yml"
       },
       {
@@ -36,11 +36,11 @@
         "name": "You've forked the me repo"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "You've pushed your work to GitHub: requestsWorking.txt"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "You've pushed your work to GitHub: checkID.json"
       },
       {
@@ -52,7 +52,7 @@
   },
   {
     "of_total": 35,
-    "mark": 24,
+    "mark": 34,
     "results": [
       {
         "value": 1,
@@ -95,35 +95,35 @@
         "name": "Exercise 0: shout - you've => YOU'VE"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - got => GOT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - to => TO"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - fight => FIGHT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - for => FOR"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - your => YOUR"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - right => RIGHT"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - to => TO"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 0: shout - party => PARTY"
       },
       {
@@ -179,11 +179,11 @@
         "name": "Exercise 3: loops_4 - ten rising lists"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_5 - write the coords"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 3: loops_6 - make a wedge"
       },
       {

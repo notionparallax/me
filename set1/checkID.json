@@ -5,30 +5,30 @@
     ],
     "machine": "arm64",
     "os_name": "posix",
-    "platform": "macOS-14.0-arm64-arm-64bit",
+    "platform": "macOS-13.4-arm64-arm-64bit",
     "processor": "arm",
-    "release": "23.0.0",
+    "release": "22.5.0",
     "system": "Darwin",
     "uname": [
         "Darwin",
         "Brandons-MacBook-Pro.local",
-        "23.0.0",
-        "Darwin Kernel Version 23.0.0: Mon May 22 22:50:46 PDT 2023; root:xnu-10002.0.40.505.5~4/RELEASE_ARM64_T8103",
+        "22.5.0",
+        "Darwin Kernel Version 22.5.0: Mon Apr 24 20:53:44 PDT 2023; root:xnu-8796.121.2~5/RELEASE_ARM64_T8103",
         "arm64",
         "arm"
     ],
-    "version": "Darwin Kernel Version 23.0.0: Mon May 22 22:50:46 PDT 2023; root:xnu-10002.0.40.505.5~4/RELEASE_ARM64_T8103",
+    "version": "Darwin Kernel Version 22.5.0: Mon Apr 24 20:53:44 PDT 2023; root:xnu-8796.121.2~5/RELEASE_ARM64_T8103",
     "python_build": [
-        "v3.11.3:f3909b8bc8",
-        "Apr  4 2023 20:12:10"
+        "v3.11.4:d2340ef257",
+        "Jun  6 2023 19:15:51"
     ],
     "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
     "python_implementation(": "CPython",
-    "python_version(": "3.11.3",
+    "python_version(": "3.11.4",
     "python_version_tuple": [
         "3",
         "11",
-        "3"
+        "4"
     ],
     "cpu_count": 8
 }

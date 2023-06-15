@@ -38,7 +38,7 @@ def add_5(a_number):
     This isn't a trick!
     First thing to do is to remove the the_answer = None
 
-    return the_answer. That's just tellign python that
+    return the_answer. That's just telling python that
     the empty block is intentional - it's python's "this page is intentionally
     left blank"
     Then you need to:
@@ -66,12 +66,9 @@ def shout(a_string):
     or in any of the million places that google will give you.
     "python make a string uppercase" is a good starting search query.
     HINT: there are a few things with upper case in their description, but
-'        they all do different things. You'll need to actually read the
-'docs to find out which one you actually need.
+    they all do different things. You'll need to actually read the docs to find out which one you actually need.
     """
-    a_string= ["YOU'VE","GOT",]
-    the_answer = a_string[0]
-    return the_answer 
+    return a_string.upper()
 
 def really_shout(a_string):
     """Return a string in uppercase, with an exclamation mark on the end.
@@ -117,7 +114,7 @@ def shout_with_a_number(a_string, a_number):
 You don't need to worry about anything below here. 
 It's there to easily test your code from inside this file 
 so that you can use the debugger more easily.
-   #################################"""
+#################################"""
 
 
 def minitest(f, args, expected):
