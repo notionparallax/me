@@ -254,8 +254,9 @@ def loops_7():
     """
     pyramid = []
     for i in range(5):
-        row = [" "] * (5 - i - 1) + ["*"] * (i + 1) + [" "] * (5 - i - 1)
+        row = [" "] * (5 - i - 1) + ["*"] * (2 * i + 1) + [" "] * (5 - i - 1)
         pyramid.append(row)
+    """pyramid_str = str(pyramid)"""
     return pyramid
 
 
