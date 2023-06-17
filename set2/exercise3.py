@@ -234,7 +234,6 @@ def loops_6():  # sourcery skip: for-append-to-extend, simplify-generator
 
 def loops_7():
     """Make a pyramid.
-
     Return this:
     [
         [' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' '],
@@ -253,16 +252,9 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    k = 0
     pyramid = []
-    for i in range(1, 6):
-        row = ""
-        for j in range(1, 6 - i):
-            row += " "
-        while k != (2 * i - 1):
-            row += "*   "
-            k += 1
-        k = 0
+    for i in range(5):
+        row = [" "] * (5 - i - 1) + ["*"] * (i + 1) + [" "] * (5 - i - 1)
         pyramid.append(row)
     return pyramid
 
