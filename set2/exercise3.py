@@ -15,6 +15,12 @@ def is_odd(a_number):
     """
     return is_odd
 
+def is_odd(a_number):
+    if a_number % 2 == 1:
+        return True
+    else:
+        return False
+
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
@@ -35,6 +41,18 @@ def fix_it(moves=True, should_move=True):
 
     return None
 
+def fix_it(moves=True, should_move=True):
+    if moves:
+        if should_move:
+            return "No Problem"
+        else:
+            return "Duct Tape"
+    else:
+        if should_move:
+            return "WD-40"
+        else:
+            return "No Problem"
+
 
 def loops_preview():
     """Make 8 poops.
@@ -48,6 +66,12 @@ def loops_preview():
         choc_list.append("💩")
     return choc_list
 
+def loops_preview():
+    poop_list = []
+    for _ in range(8):
+        poop_list.append("💩")
+    return poop_list
+
 
 def loops_1a():
     """Make 10 stars.
@@ -56,7 +80,12 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    
+def loops_1a():
+    star_list = []
+    for _ in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -70,6 +99,12 @@ def loops_1c(number_of_items=5, symbol="#"):
     or the symbol, let it be whatever it wants to be.
     """
     return None
+
+def loops_1c(number_of_items=5, symbol="#"):
+    symbol_list = []
+    for _ in range(number_of_items):
+        symbol_list.append(symbol)
+    return symbol_list
 
 
 def loops_2():
@@ -91,6 +126,13 @@ def loops_2():
           ]
     """
     return None
+
+def loops_2():
+    starfield = []
+    for _ in range(10):
+        row = ['*'] * 10
+        starfield.append(row)
+    return starfield
 
 
 def loops_3():
@@ -116,6 +158,13 @@ def loops_3():
     """
     return None
 
+def loops_3():
+    block = []
+    for i in range(10):
+        row = [str(i)] * 10
+        block.append(row)
+    return block
+
 
 def loops_4():
     """Make a block of numbers that rises left to right.
@@ -135,6 +184,13 @@ def loops_4():
     ]
     """
     return None
+
+def loops_4():
+    block = []
+    for _ in range(10):
+        row = [str(i) for i in range(10)]
+        block.append(row)
+    return block
 
 
 def loops_5():
@@ -166,6 +222,16 @@ def loops_5():
     """
     return None
 
+def loops_5():
+    coordinates = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            coord = f"(i{i}, j{j})"
+            row.append(coord)
+        coordinates.append(row)
+    return coordinates
+
 
 def loops_6():
     """Make a wedge of numbers.
@@ -189,6 +255,14 @@ def loops_6():
     """
     return None
 
+def loops_6():
+    wedge = []
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(str(j))
+        wedge.append(row)
+    return wedge
 
 def loops_7():
     """Make a pyramid.
@@ -212,6 +286,18 @@ def loops_7():
     lots of diagrams!
     """
     return None
+
+def loops_7():
+    pyramid = []
+    for i in range(5):
+        row = []
+        num_spaces = 4 - i
+        num_stars = 2 * i + 1
+        row.extend([' '] * num_spaces)
+        row.extend(['*'] * num_stars)
+        row.extend([' '] * num_spaces)
+        pyramid.append(row)
+    return pyramid
 
 
 def little_printer(some_kind_of_list, exercise_name):
