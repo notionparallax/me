@@ -32,6 +32,43 @@ def advancedGuessingGame():
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
+def validate_input(response):
+    try:
+        number = int(response)
+        return number
+    except ValueError:
+        return None
+
+def get_user_guess(low, high):
+    while True:
+        response = input("Enter your guess between {} and {}: ".format(low, high))
+        number = validate_input(response)
+        if number is not None:
+            if low <= number <= high:
+                return number
+            else:
+                print("Number out of bounds. Try again.")
+        else:
+            print("Invalid input. Please enter a number.")
+
+def advancedGuessingGame():
+    low = int(input("Enter the lower bound: "))
+    high = int(input("Enter the upper bound: "))
+    target_number = random.randint(low, high)
+    attempts = 0
+
+    while True:
+        guess = get_user_guess(low, high)
+        attempts += 1
+
+        if guess == target_number:
+            return "You got it! It took you {} attempts.".format(attempts)
+        elif guess < target_number:
+            print("Too low! Try again.")
+        else:
+            print("Too high! Try again.")
+
+
 
 if __name__ == "__main__":
     print(advancedGuessingGame())

@@ -19,6 +19,13 @@ def loop_ranger(start, stop=None, step=1):
     """
     return None
 
+def loop_ranger(start, stop=None, step=1):
+    numbers = []
+    current = start
+    while current < stop if stop is not None else True:
+        numbers.append(current)
+        current += step
+    return numbers
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -30,6 +37,8 @@ def two_step_ranger(start, stop):
     """
     return None
 
+def two_step_ranger(start, stop):
+    return list(range(start, stop, 2))
 
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
@@ -41,6 +50,17 @@ def stubborn_asker(low, high):
     """
     return None
 
+def stubborn_asker(low, high):
+    while True:
+        number = input("Please enter a number between {} and {}: ".format(low, high))
+        try:
+            number = int(number)
+            if low <= number <= high:
+                return number
+            else:
+                print("Number out of bounds. Try again.")
+        except ValueError:
+            print("Invalid input. Try again.")
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -51,7 +71,14 @@ def not_number_rejector(message):
     """
     return None
 
-
+def not_number_rejector(message):
+    while True:
+        response = input(message)
+        try:
+            number = int(response)
+            return number
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 def super_asker(low, high):
     """Robust asking function.
 
@@ -60,6 +87,17 @@ def super_asker(low, high):
     """
     return None
 
+def super_asker(low, high):
+    while True:
+        response = input("Enter a number between {} and {}: ".format(low, high))
+        try:
+            number = int(response)
+            if low <= number <= high:
+                return number
+            else:
+                print("Number out of bounds. Try again.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
