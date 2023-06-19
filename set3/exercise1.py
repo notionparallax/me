@@ -85,7 +85,7 @@ def super_asker(low, high):
     """
     while True:
         message = "Enter a number between {low} and a high number {high} :::".format(
-            low=low, high=high
+            low=int(low), high=int(high)
         )
         return message
         while True:

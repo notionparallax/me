@@ -6,6 +6,14 @@ Steps on the way to making your own guessing game.
 import random
 
 
+def limit_integer_value(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Please use integer datatype entry.")
+
+
 def advancedGuessingGame():
     """Play a guessing game with a user.
 
@@ -13,11 +21,11 @@ def advancedGuessingGame():
     from exercise 3, but to allow for:
     * a lower bound to be entered, e.g. guess numbers between 10 and 20
     * ask for a better input if the user gives a non integer value anywhere.
-      I.e. throw away inputs like "ten" or "8!" but instead of crashing
-      ask for another value.
+    I.e. throw away inputs like "ten" or "8!" but instead of crashing
+    ask for another value.
     * chastise them if they pick a number outside the bounds.
     * see if you can find the other failure modes.
-      There are three that I can think of. (They are tested for.)
+    There are three that I can think of. (They are tested for.)
 
     NOTE: whilst you CAN write this from scratch, and it'd be good for you to
     be able to eventually, it'd be better to take the code from exercise 2 and
@@ -28,7 +36,33 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+    while True:
+        try:
+            lowerBound = limit_integer_value("Enter an lower bound: ")
+            upperBound = limit_integer_value("Enter an upper bound: ")
+            break
+        except ValueError:
+            print("Please use integer datatype entry.")
+    print(f"OK then, a number between {lowerBound} and {upperBound} ?")
 
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+
+    while not guessed:
+        guessedNumber = limit_integer_value("Guess a number: ")
+        print(f"You guessed {guessedNumber},")
+        if guessedNumber < lowerBound or guessedNumber > upperBound:
+            print(f"Your Guessed number is outside the Bound")
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        elif guessedNumber > actualNumber:
+            print("Too big, try again :'(")
+        else:
+            print(f"You got it!! It was {actualNumber}")
+            guessed = True
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
