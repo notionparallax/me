@@ -72,7 +72,9 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        message = "Enter a number {_number}  ::".format(_number=int)
+        return message
 
 
 def super_asker(low, high):
@@ -81,6 +83,26 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
+    while True:
+        message = "Enter a number between {low} and a high number {high} :::".format(
+            low=low, high=high
+        )
+        return message
+        while True:
+            input_number = int(input(message))
+            if low < input_number < high:
+                print(
+                    "Thank you. The value that you have entered {input} is within the range ".format(
+                        input=input_number
+                    )
+                )
+                return input_number
+            else:
+                print(
+                    "The response is outside the bound. {input} is not the number between {low} and {high}".format(
+                        low=low, high=high, input=input_number
+                    )
+                )
     return None
 
 
