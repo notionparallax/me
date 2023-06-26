@@ -29,18 +29,24 @@ def get_some_details():
     Return a new dictionary that just has the last name, password, and the
     number you get when you add the postcode to the id-value.
     TIP: Make sure that you add the numbers, not concatinate the strings.
-         E.g. 2000 + 3000 = 5000 not 20003000
+        E.g. 2000 + 3000 = 5000 not 20003000
     TIP: Keep a close eye on the format you get back. JSON is nested, so you
-         might need to go deep. E.g to get the name title you would need to:
-         data["results"][0]["name"]["title"]
-         Look out for the type of brackets. [] means list and {} means
-         dictionary, you'll need integer indeces for lists, and named keys for
-         dictionaries.
+        might need to go deep. E.g to get the name title you would need to:
+        data["results"][0]["name"]["title"]
+        Look out for the type of brackets. [] means list and {} means
+        dictionary, you'll need integer indeces for lists, and named keys for
+        dictionaries.
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    i = data["results"][0]["name"]["last"]
+    j = data["results"][0]["login"]["password"]
+    k = int(data["results"][0]["location"]["postcode"])
+    m = int(data["results"][0]["id"]["value"])
+    n = k + m
+
+    return {"lastName": i, "password": j, "postcodePlusID": n}
 
 
 def wordy_pyramid():
