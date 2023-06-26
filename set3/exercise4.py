@@ -30,7 +30,7 @@ def binary_search(low, high, actual_number):
         tries += 1
         print("Guess", guess)
         if guess == actual_number:
-            return {"guess": guess, "tries": tries}
+            return {"guess": guess, "tries": tries, "actual_number": actual_number}
         if guess < actual_number:
             low = guess + 1
         else:
@@ -44,3 +44,4 @@ if __name__ == "__main__":
     print(binary_search(1, 100, 95))
     print(binary_search(1, 51, 5))
     print(binary_search(1, 50, 5))
+    print(binary_search(1, 3, 1))
