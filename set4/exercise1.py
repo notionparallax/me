@@ -83,9 +83,14 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
-    pyramid = []
-
-    return pyramid
+    wordcount = 3
+    url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={wordcount}"
+    r = requests.get(url)
+    if r.status_code == 200:
+        the_json = json.loads(r.text)
+        print(the_json)
+    else:
+        print(r)
 
 
 def pokedex(low=1, high=5):
