@@ -166,10 +166,11 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    path = "set4/lasers.pew"
-
-    with open(path, "w") as file:
-        file.read()
+    number = "six"
+    file_path = "me/set4/lasers.pew"
+    lasers_pew = (file_path, "w")
+    with open(file_path, "w", encoding="utf-8") as lasers_pew:
+        lasers_pew.write(f"The answer is {number}")
 
 
 if __name__ == "__main__":
