@@ -166,7 +166,10 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    pass
+    path = "set4/lasers.pew"
+
+    with open(path, "w") as file:
+        file.read()
 
 
 if __name__ == "__main__":
