@@ -166,11 +166,17 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
-    number = "six"
-    file_path = "me/set4/lasers.pew"
+    file_path = "/Users/brandonwu/Documents/GitHub/1161/me/set4/lasers.pew"
+    gcode_path = "/Users/brandonwu/Documents/GitHub/1161/me/set4/Trispokedovetiles(laser).gcode"
+    count = 0
+    with open(gcode_path, 'r') as file:
+        for line in file:
+            if 'M10 P1' in line:
+                count += 1
+    count_str = str(count)
     lasers_pew = (file_path, "w")
     with open(file_path, "w", encoding="utf-8") as lasers_pew:
-        lasers_pew.write(f"The answer is {number}")
+        lasers_pew.write(f"{count_str}")
 
 
 if __name__ == "__main__":
