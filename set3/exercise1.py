@@ -74,10 +74,10 @@ def not_number_rejector(message):
     """
     while True:
         try:
-            message = "Enter a number {_number}  ::".format(_number=int)
-            return message
-        except Exception as e:
-            print("Try again({_number})".format(e))
+            user_input = input(message)
+            return float(user_input)
+        except ValueError:
+            print("Try again..")
 
 
 def super_asker(low, high):
@@ -88,12 +88,12 @@ def super_asker(low, high):
     """
     while True:
         try:
-            message = "Enter a number {_number}  ::".format(_number=int)
-            return message
-        except Exception as e:
-            print("Try again({_number})".format(e))
-        while True:
-            input_number = int(input(message))
+            user_input = input(
+                "Enter a number between {low} and a high number {high} :::".format(
+                    low=low, high=high
+                )
+            )
+            input_number = float(user_input)
             if low < input_number < high:
                 print(
                     "Thank you. The value that you have entered {input} is within the range ".format(
@@ -107,6 +107,8 @@ def super_asker(low, high):
                         low=low, high=high, input=input_number
                     )
                 )
+        except ValueError:
+            print(f"/n Invalid. Enter a valid input.")
 
 
 if __name__ == "__main__":
