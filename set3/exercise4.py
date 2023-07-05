@@ -35,7 +35,6 @@ def binary_search(low, high, actual_number):
             low = guess + 1
         else:
             high = guess - 1
-    return None
 
 
 if __name__ == "__main__":

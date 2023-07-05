@@ -73,8 +73,11 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
     while True:
-        message = "Enter a number {_number}  ::".format(_number=int)
-        return message
+        try:
+            message = "Enter a number {_number}  ::".format(_number=int)
+            return message
+        except Exception as e:
+            print("Try again({_number})".format(e))
 
 
 def super_asker(low, high):
@@ -84,10 +87,11 @@ def super_asker(low, high):
     to make a function that does it all!
     """
     while True:
-        message = "Enter a number between {low} and a high number {high} :::".format(
-            low=int(low), high=int(high)
-        )
-        return message
+        try:
+            message = "Enter a number {_number}  ::".format(_number=int)
+            return message
+        except Exception as e:
+            print("Try again({_number})".format(e))
         while True:
             input_number = int(input(message))
             if low < input_number < high:
@@ -103,7 +107,6 @@ def super_asker(low, high):
                         low=low, high=high, input=input_number
                     )
                 )
-    return None
 
 
 if __name__ == "__main__":
