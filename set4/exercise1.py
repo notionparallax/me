@@ -1,11 +1,12 @@
 """All about IO."""
 
 
+import inspect
 import json
 import os
-import requests
-import inspect
 import sys
+
+import requests
 
 # Handy constants
 LOCAL = os.path.dirname(os.path.realpath(__file__))  # the context of this file
