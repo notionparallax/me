@@ -43,6 +43,21 @@ def get_some_details():
     return {"lastName": None, "password": None, "postcodePlusID": None}
 
 
+import json
+
+def get_some_details():
+    json_data = open(LOCAL + "/lazyduck.json").read()
+    data = json.loads(json_data)
+
+    last_name = data["results"][0]["name"]["last"]
+    password = data["results"][0]["login"]["password"]
+    postcode = int(data["results"][0]["location"]["postcode"])
+    id_value = int(data["results"][0]["id"]["value"])
+
+    postcode_plus_id = postcode + id_value
+
+    return {"lastName": last_name, "password": password, "postcodePlusID": postcode_plus_id}
+
 def wordy_pyramid():
     """Make a pyramid out of real words.
 
@@ -79,7 +94,32 @@ def wordy_pyramid():
     """
     pyramid = []
 
+import requests
+
+def wordy_pyramid():
+    pyramid = []
+    base_url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
+
+    # Generate words for the descending part of the pyramid
+    for length in range(3, 21, 2):
+        url = base_url + str(length)
+        response = requests.get(url)
+        word = response.text.strip()
+        pyramid.append(word)
+
+    # Generate words for the ascending part of the pyramid
+    for length in range(20, 3, -2):
+        url = base_url + str(length)
+        response = requests.get(url)
+        word = response.text.strip()
+        pyramid.append(word)
+
     return pyramid
+
+
+
+
+
 
 
 def pokedex(low=1, high=5):
@@ -101,8 +141,30 @@ def pokedex(low=1, high=5):
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
-
     return {"name": None, "weight": None, "height": None}
+
+import requests
+import json
+
+def pokedex(low=1, high=5):
+    tallest_pokemon = None
+    max_height = 0
+
+    for id in range(low, high+1):
+        url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            pokemon_data = json.loads(response.text)
+            height = pokemon_data['height']
+            if height > max_height:
+                max_height = height
+                tallest_pokemon = {
+                    "name": pokemon_data['name'],
+                    "height": height,
+                    "weight": pokemon_data['weight']
+                }
+
+    return tallest_pokemon
 
 
 def diarist():
@@ -124,6 +186,20 @@ def diarist():
     """
     pass
 
+def diarist():
+    gcode_file = "/Users/sophbaker/Documents/CODE1161/1161/me/set4/Trispokedovetiles(laser).gcode"
+    laser_on_off_count = 0
+
+    with open(gcode_file, 'r') as file:
+        for line in file:
+            if "M10 P1" in line:
+                laser_on_off_count += 1
+
+    count_str = str(laser_on_off_count)
+    output_file = "me/set4/lasers.pew"
+
+    with open(output_file, 'w') as file:
+        file.write(count_str)
 
 if __name__ == "__main__":
     print(get_some_details())
@@ -136,7 +212,7 @@ if __name__ == "__main__":
     diarist()
 
     in_root = os.path.isfile("lasers.pew")
-    in_set4 = os.path.isfile("set4/lasers.pew")
+    in_set4 = os.path.isfile("me/set4/lasers.pew")
     if not in_set4 and not in_root:
         print("diarist did not create lasers.pew")
     elif not in_set4 and in_root:
