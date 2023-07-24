@@ -283,7 +283,7 @@ def fast_filler(number_of_words=200) -> str:
     words = []
     word_lengths = list(my_dict.keys())
 
-    for _ in range(number_of_words):
+    for i in range(number_of_words):
         word_length = random.choice(word_lengths)
         word = random.choice(my_dict[word_length])
         words.append(word)
