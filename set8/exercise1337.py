@@ -277,6 +277,9 @@ def fast_filler(number_of_words=200) -> str:
     else:
         # If the file doesn't exist, create the dictionary
         my_dict = make_filler_text_dictionary()
+        # Save the dictionary to the file
+        with open(fname, "w") as file:
+            json.dump(my_dict, file)
 
     words = []
     word_lengths = list(my_dict.keys())
@@ -286,6 +289,7 @@ def fast_filler(number_of_words=200) -> str:
         word = random.choice(my_dict[word_length])
         words.append(word)
 
+    # Save the updated dictionary to the file after each run
     with open(fname, "w") as file:
         json.dump(my_dict, file)
 
