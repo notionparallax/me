@@ -426,7 +426,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 28,
+    "mark": 32,
     "results": [
       {
         "value": 1,
@@ -537,28 +537,28 @@
         "name": "\nbest_letter_for_pets:\n    given:    * no args *\n    expected: e\n    got:      e"
       },
       {
-        "value": 0,
-        "name": "\nmake_filler_text_dictionary:\n    given:    * no args *\n    expected: [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]\n    got:      []"
+        "value": 1,
+        "name": "\nmake_filler_text_dictionary:\n    given:    * no args *\n    expected: [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]\n    got:      [[3, 3, 3, 3], [4, 4, 4, 4], [5, 5, 5, 5], [6, 6, 6, 6], [7, 7, 7, 7]]"
+      },
+      {
+        "value": 1,
+        "name": "\nrandom_filler_text:\n    given:    50\n    expected: True\n    got:      True"
+      },
+      {
+        "value": 1,
+        "name": "\nrandom_filler_text:\n    given:    1000\n    expected: True\n    got:      True"
+      },
+      {
+        "value": 1,
+        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      True"
       },
       {
         "value": 0,
-        "name": "\nrandom_filler_text:\n    given:    50\n    expected: True\n    got:      False"
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
       },
       {
         "value": 0,
-        "name": "\nrandom_filler_text:\n    given:    1000\n    expected: True\n    got:      False"
-      },
-      {
-        "value": 0,
-        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'NoneType' object has no attribute 'split'"
-      },
-      {
-        "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
-      },
-      {
-        "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
+        "name": "\nfast_filler:\n    given:    10\n    expected: True\n    got:      False"
       },
       {
         "value": 1,
