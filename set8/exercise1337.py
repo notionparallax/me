@@ -275,9 +275,8 @@ def fast_filler(number_of_words=200) -> str:
             # Convert keys back to integers
             my_dict = {int(key): value for key, value in my_dict.items()}
     else:
-        # If the file doesn't exist, create the dictionary
+        # If the file doesn't exist, create the dictionary and save it to the file
         my_dict = make_filler_text_dictionary()
-        # Save the dictionary to the file
         with open(fname, "w") as file:
             json.dump(my_dict, file)
 
@@ -289,11 +288,19 @@ def fast_filler(number_of_words=200) -> str:
         word = random.choice(my_dict[word_length])
         words.append(word)
 
-    # Save the updated dictionary to the file after each run
-    with open(fname, "w") as file:
-        json.dump(my_dict, file)
+    text = " ".join(words)
 
-    return " ".join(words)
+    # Ensure the first two characters are an uppercase letter and a lowercase letter
+    if not text[0].isupper():
+        text = text[0].upper() + text[1:]
+    if not text[1].islower():
+        text = text[0] + text[1].lower() + text[2:]
+
+    # Ensure the text ends with a period
+    if not text.endswith("."):
+        text += "."
+
+    return text
 
 
 if __name__ == "__main__":
