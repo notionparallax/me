@@ -220,7 +220,7 @@ def make_filler_text_dictionary() -> Dict:
 
     for length in range(3, 8):
         words = []
-        for _ in range(4):
+        for i in range(4):
             response = requests.get(url + str(length))
             if response.status_code == 200:
                 words.append(response.text.strip())
