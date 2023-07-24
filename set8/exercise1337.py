@@ -245,7 +245,7 @@ def random_filler_text(number_of_words=200) -> str:
     words = []
     word_lengths = list(my_dict.keys())
 
-    for _ in range(number_of_words):
+    for i in range(number_of_words):
         word_length = random.choice(word_lengths)
         word = random.choice(my_dict[word_length])
         words.append(word)
@@ -272,7 +272,7 @@ def fast_filler(number_of_words=200) -> str:
         # Load the dictionary from the file
         with open(fname, "r") as file:
             my_dict = json.load(file)
-            # Convert integer keys back to integers
+            # Convert keys back to integers
             my_dict = {int(key): value for key, value in my_dict.items()}
     else:
         # If the file doesn't exist, create the dictionary and save it to the file
