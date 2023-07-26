@@ -13,9 +13,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return is_odd
 
-def is_odd(a_number):
     if a_number % 2 == 1:
         return True
     else:
@@ -37,11 +35,6 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-
-
-    return None
-
-def fix_it(moves=True, should_move=True):
     if moves:
         if should_move:
             return "No Problem"
@@ -61,12 +54,7 @@ def loops_preview():
     return a list of 8 items, each one a string with exacly one 💩 in it.
     E.g.: ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
     """
-    choc_list = []
-    for i in range(8):
-        choc_list.append("💩")
-    return choc_list
 
-def loops_preview():
     poop_list = []
     for _ in range(8):
         poop_list.append("💩")
@@ -80,8 +68,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    
-def loops_1a():
+
     star_list = []
     for _ in range(10):
         star_list.append("*")
@@ -98,9 +85,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
 
-def loops_1c(number_of_items=5, symbol="#"):
     symbol_list = []
     for _ in range(number_of_items):
         symbol_list.append(symbol)
@@ -125,12 +110,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
 
-def loops_2():
     starfield = []
     for _ in range(10):
-        row = ['*'] * 10
+        row = ["*"] * 10
         starfield.append(row)
     return starfield
 
@@ -156,9 +139,7 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
 
-def loops_3():
     block = []
     for i in range(10):
         row = [str(i)] * 10
@@ -183,9 +164,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
 
-def loops_4():
     block = []
     for _ in range(10):
         row = [str(i) for i in range(10)]
@@ -220,9 +199,7 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
 
-def loops_5():
     coordinates = []
     for i in range(10):
         row = []
@@ -253,9 +230,7 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
 
-def loops_6():
     wedge = []
     for i in range(10):
         row = []
@@ -263,6 +238,7 @@ def loops_6():
             row.append(str(j))
         wedge.append(row)
     return wedge
+
 
 def loops_7():
     """Make a pyramid.
@@ -285,17 +261,15 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
 
-def loops_7():
     pyramid = []
     for i in range(5):
         row = []
         num_spaces = 4 - i
         num_stars = 2 * i + 1
-        row.extend([' '] * num_spaces)
-        row.extend(['*'] * num_stars)
-        row.extend([' '] * num_spaces)
+        row.extend([" "] * num_spaces)
+        row.extend(["*"] * num_stars)
+        row.extend([" "] * num_spaces)
         pyramid.append(row)
     return pyramid
 
