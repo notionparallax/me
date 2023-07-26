@@ -102,7 +102,7 @@ def shout_with_a_number(a_string, a_number):
     #a_string='hello'
     #a_number=42
     #print(a_string.upper(), a_number)
-    the_answer = a_string.upper() + a_number
+    the_answer = a_string.upper() + str(a_number)
     return the_answer
 
 
