@@ -1,3 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-test 
-test
+Week 1: Going through the steps for this week's task was both interesting and confusing at the same time. I was able to start understanding the commands and their function and how to use Visual Studio Code generally. I encountered some problems trying the save my file and make commits but after some guiding from my tutor and personal help from my friend, I was able to figure out how to commit and push my files and finish my week 1 task. Some light mistakes I need to take note of is being unobservant with the commands and symbols that are used and what it indicates. Sometimes I am missing parts of a command which results to the computer being unable to decipher what I am typing. 
