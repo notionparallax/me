@@ -18,7 +18,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    return a_number % 2 == 1
 
 
 def fix_it(moves=True, should_move=True):
@@ -36,7 +36,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if (should_move and moves) or (not should_move and not moves):
+        return "No Problem"
+    elif not moves and should_move:
+        return "WD-40"
+    else:
+        return "Duct Tape"
 
 
 def loops_preview():
@@ -59,7 +64,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    start_list = []
+    for i in range(8):
+        start_list.append("*")
+    return start_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -72,7 +80,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    start_list = []
+    for i in range(number_of_items):
+        start_list.append(symbol)
+    return start_list
 
 
 def loops_2_preview():
@@ -114,7 +125,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append("*")
+        field.append(row)
+    return field
 
 
 def loops_3():
@@ -138,7 +155,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(i))
+        field.append(row)
+    return field
 
 
 def loops_4():
@@ -158,7 +181,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(j))
+        field.append(row)
+    return field
 
 
 def loops_5():
@@ -188,7 +217,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append("(i" + str(i) + ", j" + str(j)+")")
+        field.append(row)
+    return field
 
 
 def loops_6():
@@ -211,7 +246,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(i+1):
+            row.append(str(j))
+        field.append(row)
+    return field
 
 
 def loops_7():
@@ -235,7 +276,20 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    field = []
+    star_start_index = 4
+    star_end_index = 5
+    for i in range(5):
+        row = []
+        for j in range(9):
+            if j >= star_start_index and j < star_end_index:
+                row.append("*")
+                continue
+            row.append(" ")
+        star_start_index -= 1
+        star_end_index += 1
+        field.append(row)
+    return field
 
 
 if __name__ == "__main__":
