@@ -19,18 +19,22 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+# I think this will print "what" by calling the print function. 
 for word in some_words:
-    print(word)
+    print(word) #it printed all the items in the some_word list in order from "what" until "?"
 
+# I think this will print "x" by calling the print function. 
 for x in some_words:
-    print(x)
+    print(x) # It printed all the items in the some_word list in order from "what" until "?"
 
-print(some_words)
+# I think this will print the whole list assigned to some_words by calling the print function. 
+print(some_words) # It printed the whole list assigned to some_words
 
+# I think this will print some_words contains more than 3 words. 
 if len(some_words) > 3:
-    print("some_words contains more than 3 words")
+    print("some_words contains more than 3 words") # it printed "some_words contains more than 3 words"
 
-
+# I think it defines usefulFunction(). The function defined prints information regarding the current operating system of a specific platform. 
 def usefulFunction():
     """
     You may want to look up what uname does before you guess
