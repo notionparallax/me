@@ -216,10 +216,8 @@ def loops_5():
       ["(i8, j0)", "(i8, j1)", "(i8, j2)", "(i8, j3)", "(i8, j4)"],
       ["(i9, j0)", "(i9, j1)", "(i9, j2)", "(i9, j3)", "(i9, j4)"]
     ]
-    """
-    
 
-    TIP:
+        TIP:
     If you've got num_bottles, e.g. num_bottles = 8
     You can construct strings either by concatinating them:
         "There are " + str(num_bottles) + " green bottles"
@@ -228,7 +226,17 @@ def loops_5():
     or, my favourite, f-strings:
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
+
     """
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(f"(i{i}, j1)")
+        field.append(row)
+    return field
+
+
     return None
 
 
