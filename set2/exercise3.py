@@ -216,6 +216,8 @@ def loops_5():
       ["(i8, j0)", "(i8, j1)", "(i8, j2)", "(i8, j3)", "(i8, j4)"],
       ["(i9, j0)", "(i9, j1)", "(i9, j2)", "(i9, j3)", "(i9, j4)"]
     ]
+    """
+    
 
     TIP:
     If you've got num_bottles, e.g. num_bottles = 8
