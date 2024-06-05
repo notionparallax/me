@@ -26,13 +26,17 @@ def is_odd(a_number):
 
 
 def fix_it(moves=True, should_move=True):
-    if (True, True):
+
+    if moves and should_move:
         return "No Problem"
-    if (True, False):
+    
+    elif moves and not should_move:
         return "WD-40"
-    if (False, True):
+    
+    elif not moves and should_move:
         return "Duct Tape"
-    if (False, False):
+    
+    else:
         return "No Problem"
     
     """Decide what to do.
@@ -72,8 +76,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
-
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
@@ -85,7 +91,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    hashtag_list = []
+    for i in range(5):
+        hashtag_list.append("#")
+    return hashtag_list
 
 
 def loops_2_preview():
@@ -127,8 +136,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
-
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append("*")
+        field.append(row)
+    return field
 
 def loops_3():
     """Make a rising block of numbers.
@@ -151,7 +165,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(i))
+        field.append(row)
+    return field
 
 
 def loops_4():
