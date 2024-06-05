@@ -191,7 +191,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(str(j))
+        field.append(row)
+    return field
 
 
 def loops_5():
