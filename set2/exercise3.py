@@ -31,10 +31,10 @@ def fix_it(moves=True, should_move=True):
         return "No Problem"
     
     elif moves and not should_move:
-        return "WD-40"
+        return "Duct Tape"
     
     elif not moves and should_move:
-        return "Duct Tape"
+        return "WD-40"
     
     else:
         return "No Problem"
@@ -231,13 +231,10 @@ def loops_5():
     field = []
     for i in range(10):
         row = []
-        for j in range(10):
-            row.append(f"(i{i}, j1)")
+        for j in range(5):
+            row.append(f"(i{i}, j{j}")
         field.append(row)
     return field
-
-
-    return None
 
 
 def loops_6():
@@ -260,7 +257,14 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        x = 1
+        for j in range(i + x):
+            row.append(str(j))
+        field.append(row)
+    return field 
 
 
 def loops_7():
@@ -284,8 +288,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
-
+    field = []
+    for i in range(5):
+        row = []
+        for j in range(9):
+            if j > i + 4 or j < 4 - i:
+                row.append(" ")
+            else:
+                row.append("*")
+        field.append(row)
+    return field
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
