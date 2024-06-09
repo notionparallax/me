@@ -226,7 +226,7 @@ def loops_5():
     or, my favourite, f-strings:
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
-
+    
     """
     field = []
     for i in range(10):
