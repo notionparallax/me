@@ -5,6 +5,22 @@ Steps on the way to making your own guessing game.
 
 import random
 
+def super_asker(low, high, message):
+    """Robust asking function.
+
+    Combine what you learnt from stubborn_asker and not_number_rejector
+    to make a function that does it all!
+    """
+    while True:
+        try:
+            number = int(input(message))
+            if low < number < high:
+                print (f"This number is between {low} and {high}")
+                return 
+            else:
+                print (f"This number is not between {low} and {high}, Try Again!")
+        except ValueError:
+            print ("Invalid, try again!")
 
 def advancedGuessingGame():
     """Play a guessing game with a user.
@@ -28,8 +44,36 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+    lowerBound = super_asker(-5000, 5000, "Enter a lower bound: ")
+    try:
+      lowerBound = int(lowerBound)
+    except ValueError:
+        print ("This is not a number, Try again!")
+    upperBound = input("Enter an upper bound: ")
+    try: 
+      upperBound = int(upperBound)
+    except ValueError:
+        print ("This is not a number, Try again!")
+    print(f"OK then, a number between {lowerBound} and {upperBound} ?")
 
-    return "You got it!"
+    actualNumber = random.randint(lowerBound, upperBound)
+
+
+    while True:
+        guessedNumber = int(input("Guess a number: "))
+        print(f"You guessed {guessedNumber},")
+        if guessedNumber == actualNumber:
+            print(f"You got it!! It was {actualNumber}")
+            return "You got it!"
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        elif guessedNumber > actualNumber:
+            print("Too big, try again :'(")
+        else: 
+        
+    
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
