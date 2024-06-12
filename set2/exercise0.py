@@ -84,7 +84,6 @@ def really_shout(a_string):
     the_answer = a_string.upper() + '!'
     return the_answer
 
-
 def shout_with_a_number(a_string, a_number):
     """Return a string in uppercase with a space and a_number concatentated.
     E.g.

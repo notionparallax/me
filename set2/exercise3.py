@@ -92,8 +92,8 @@ def loops_1c(number_of_items=5, symbol="#"):
     or the symbol, let it be whatever it wants to be.
     """
     hashtag_list = []
-    for i in range(5):
-        hashtag_list.append("#")
+    for i in range(number_of_items):
+        hashtag_list.append(symbol)
     return hashtag_list
 
 
