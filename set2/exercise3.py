@@ -232,7 +232,7 @@ def loops_5():
     for i in range(10):
         row = []
         for j in range(5):
-            row.append(f"(i{i}, j{j}")
+            row.append(f"(i{i}, j{j})")
         field.append(row)
     return field
 
