@@ -16,12 +16,14 @@ def exampleGuessingGame():
     This is an example guessing game. It'll test as an example too.
     """
     print("\nWelcome to the guessing game!")
-    print("A number between 0 and _ ?")
+    print("A number between _ and _ ?")
     upperBound = input("Enter an upper bound: ")
-    print(f"OK then, a number between 0 and {upperBound} ?")
+    lowerBound = input("Enter a lower bound: ")
+    print(f"OK then, a number between {lowerBound} and {upperBound} ?")
     upperBound = int(upperBound)
+    lowerBound = int(lowerBound)
 
-    actualNumber = random.randint(0, upperBound)
+    actualNumber = random.randint(lowerBound, upperBound)
 
     guessed = False
 
