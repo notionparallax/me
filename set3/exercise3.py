@@ -11,23 +11,12 @@ def bounds(low, high, message):
             number = int(input(message))
             if low < number < high:
                 print (f"This number is between {low} and {high}")
-                return 
+                return number
             else:
                 print (f"This number is not between {low} and {high}, Try Again!")
         except ValueError:
             print ("This is not a number, try again!")
 
-def lowerbounds(low, high, message):
-    while True:
-        try:
-            number = int(input(message))
-            if low < number < high:
-                print (f"This number is between {low} and {high}")
-                return 
-            else:
-                print (f"This number is not between {low} and {high}, Try Again!")
-        except ValueError:
-            print ("This is not a number, try again!")
 
 def advancedGuessingGame():
     """Play a guessing game with a user.
@@ -60,14 +49,17 @@ def advancedGuessingGame():
     actualNumber = random.randint(lowerBound, upperBound)
 
     while True:
-        guessedNumber = input("Guess a number: ")
-        if guessedNumber == actualNumber:
-            print(f"You got it!! It was {actualNumber}")
-            return "You got it!"
-        elif guessedNumber < actualNumber:
+        try:
+          guessedNumber = int(input("Guess a number: "))
+          if guessedNumber == actualNumber:
+              print(f"You got it!! It was {actualNumber}")
+              return "You got it!"
+          elif guessedNumber < actualNumber:
             print("Too small, try again :'(")
-        else:
+          else:
             print("Too big, try again :'(")
+        except ValueError:
+            print ("This is not a number, try again!")
 
     
     # the tests are looking for the exact string "You got it!". Don't modify that!

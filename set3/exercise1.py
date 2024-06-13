@@ -48,10 +48,9 @@ def stubborn_asker(low, high):
     Look up the docs for a function called "input"
     """
     while True:
-        i = input("Enter a number: ")
-        if low < int(i) < high:
+        if low < int(input("Enter a number: ")) < high:
             print (f"This number is between {low} and {high}")
-            return
+            return "Yay you got it!"
         else:
             print (f"This number is not between {low} and {high}, Try Again!")
 
@@ -67,7 +66,7 @@ def not_number_rejector(message):
         try:
             number = int(input("Enter a number: "))
             print ("This is a number!")
-            return
+            return "Yay you got it!"
         except ValueError:
             print ("Invalid, try again!")
         
@@ -84,7 +83,7 @@ def super_asker(low, high):
             number = int(input("Enter a number: "))
             if low < number < high:
                 print (f"This number is between {low} and {high}")
-                return 
+                return "Yay you got it!"
             else:
                 print (f"This number is not between {low} and {high}, Try Again!")
         except ValueError:
