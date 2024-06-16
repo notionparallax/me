@@ -5,6 +5,15 @@ Steps on the way to making your own guessing game.
 
 import random
 
+def not_number_rejector(message):
+  while True:
+        num = 0
+        try:
+            num = int(input(f"Please input a number."))
+        except Exception as e:
+            print(f"{message}")
+            continue
+        return num
 
 def advancedGuessingGame():
     """Play a guessing game with a user.
@@ -28,8 +37,31 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    print("\nWelcome to the guessing game!")
+    print("A number between 0 and _ ?")
+    upperBound = 10
+    lowerBound = 5
+    
+    print(f"OK then, a number between 0 and {upperBound} ?")
+    upperBound = int(upperBound)
+    lowerBound = int(lowerBound)
 
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+
+    while not guessed:
+        guessedNumber = random.randint(lowerBound, upperBound)
+        print(f"You guessed {guessedNumber},")
+        if guessedNumber == actualNumber:
+            print(f"You got it!! It was {actualNumber}")
+            guessed = True
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+        else:
+            print("Too big, try again :'(")
     return "You got it!"
+
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
