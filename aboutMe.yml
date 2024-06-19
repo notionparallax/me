@@ -1,18 +1,4 @@
-# This file is UPER IMPORTANT. It's what joins your github name to your
-# student number, and that's what makes sure that you get a mark.
-
 first_name: Yuyun
-last-name: Zhou
 studentNumber: z5354052 # if you're not at UNSW, your org name, e.g. BVN
-officialEmail: z5354052@ad.unsw.edu.au
-# accounts
 stackOverflowLink: https://stackoverflow.com/users/25260191/yuyun-zhou
 github: Yuyun-Zhou
-# This format is called YAML which stands for Yet Another Markup Language
-# It's supposed to be machine readable, and human readable. It does a pretty
-# good job of both of those goals, but there are some gotchas:
-# it's structured as key: value pairs.
-# You MUST have a space after that colon. key:value will break it.
-# anything that starts with a #, like this line, is a comment. It's ignored by
-# the computer.
-# The tests check this file pretty carefully, so make sure it's properly filled in!
